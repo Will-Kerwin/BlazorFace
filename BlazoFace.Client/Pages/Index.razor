@@ -1,0 +1,13 @@
+﻿@page "/"
+@inject NavigationManager NavMgr;
+
+<PageTitle>Index</PageTitle>
+
+@code{
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        NavMgr.NavigateTo($"/{Guid.NewGuid()}");
+    }
+
+}
